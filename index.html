@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <script>
+        /*Lo siento, Oscar - pero cuando comenzé a tener que buscar como hacer esto, únicamente,
+        con HTML y CSS y estar intentando durante quince minutos hacerlo con checkboxes escondidas, supe que no
+        tenía otro remedio*/
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("menu-link").addEventListener("click", function () {
+                let menu = document.querySelector(".all-the-menu");
+                if (menu.style.display === "none") {
+                    menu.style.display = "grid";
+                } else {
+                    menu.style.display = "none";
+                }
+            });
+            document.getElementById("pfp-link").addEventListener("click", function() {
+                let pfp = document.querySelector(".all-the-profile");
+                if (pfp.style.display === "none") {
+                    pfp.style.display = "flex";
+                } else {
+                    pfp.style.display = "none";
+                }
+            });
+
+            document.getElementById("close-profile").addEventListener("click", function() {
+                let close = document.querySelector(".all-the-profile");
+                if (close.style.display === "flex") {
+                    close.style.display = "none"
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <div class="dropdown"></div>
+            <a href="https://about.google/?fg=1&utm_source=google-ES&utm_medium=referral&utm_campaign=hp-header">Sobre
+                Google</a>
+            <a
+                href="https://store.google.com/ES?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=es-ES">Tienda</a>
+        </div>
+        <div class="nav-right"><a href="https://mail.google.com/mail/&ogbl">Gmail</a>
+            <a href="https://www.google.com/imghp?hl=es&ogbl">Imágenes</a>
+            <div class="nav-right-images-container">
+                <div class="dropdown-menu">
+
+                    <button id="menu-link" onclick="toggleMenu()"><img src="menu.svg" class="nav-img menu"></button>
+                    <div class="dropdown-menu-content">Aplicaciones de Google</div>
+                </div>
+
+                <div class="dropdown-pfp">
+                    <button id="pfp-link" onclick="toggleMenu()"><img src="pfp.png" class="nav-img pfp"></button>
+                    <div class="dropdown-pfp-content"><b>Cuenta de Google</b><br>Lorem Ipsum<br>loremipsum@gmail.com
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="all-the-menu active-menu">
+
+        <div class="menu-element"><img src="pfp.png">
+            <figcaption>Cuenta</figcaption>
+        </div>
+        <div class="menu-element"><img src="favicon.png">
+            <figcaption>Búsqueda</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/maps.png">
+            <figcaption>Maps</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/youtube.png">
+            <figcaption>Youtube</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/play.png">
+            <figcaption>Play</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/news.png">
+            <figcaption>Noticias</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/gmail.png">
+            <figcaption>Gmail</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/meet.png">
+            <figcaption>Meet</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/chat.png">
+            <figcaption>Chat</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/contacts.png">
+            <figcaption>Contacts</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/drive.png">
+            <figcaption>Drive</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/calendar.png">
+            <figcaption>Calendar</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/translate.png">
+            <figcaption>Traductor</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/photos.png">
+            <figcaption>Fotos</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/anuncios.png">
+            <figcaption>My centro...</figcaption>
+        </div>
+        <div class="menu-element"><img src="icons/shopping.png">
+            <figcaption>Shopping</figcaption>
+
+        </div>
+
+    </div>
+    <div class="all-the-profile active-menu">
+        <p class="email-handle">loremipsum@gmail.com</p>
+        <button id="close-profile" onclick="toggleMenu()" ><img src="icons/close.png" class="closing"></button>
+        <div><img src="pfp.png" class="profile"><img src="icons/edit.png" class="edit-icon"></div>
+        <h2>¡Hola, Lorem!</h2>
+        <button type="submit" class="gestion">Gestionar tu cuenta de Google</button>
+        <button type="submit" class="recomendadas"><img class="icons-profile" src="icons/rec_actions.png"> Acciones
+            recomendadas</button>
+        <div class="button-row">
+            <button type="submit" class="button-down añadir"><img src="icons/plus.png" class="icons-profile  añadir-img"> Añadir cuenta</button>
+            <button type="submit" class="button-down cerrar"><img src="icons/exit.png" class="icons-profile">Cerrar sesión</button>
+        </div>
+        <p class="pol-privacidad"><a href="https://policies.google.com/privacy?hl=es&authuser=0">Política de privacidad</a>&nbsp;&nbsp;&#x2022;&nbsp;&nbsp;<a href="https://policies.google.com/terms?hl=es&authuser=0">Términos del servicio</a></p>
+    </div>
+    <main>
+        <header>
+            <h1><span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span
+                    class="blue">g</span><span class="green">l</span><span class="red">e</span></h1>
+        </header>
+        <!--Cambiando el action, conseguí hacer que la barra de búsqueda fuese funcional para buscar en Google. El name "btnI" en el segundo botón
+        permite también que sea funcional el botón "Voy a tener suerte", pero por alguna razón, no funciona siempre.-->
+        <form method="get" action="https://www.google.com/search" class="form-container">
+            <div class="searchBar"><img src="lupa.png" class="glass">
+                <input type="search" id="search" name="q" placeholder="Buscar en Google o insertar una URL">
+
+                <img src="mic.png" class="side">
+
+                <img src="lens.png" class="side">
+            </div>
+            <br>
+            <div class="btt">
+                <button type="submit" id="send" name="send">Buscar con Google</button>
+                <button type="submit" id="luck" name="btnI">Voy a tener suerte</button>
+            </div>
+        </form><br><br>
+        <footer>Ofrecido por Google en: <a
+                href="https://www.google.es/setprefs?sig=0_YtcfE-ogQRI-cqkSHHyH5HwgDYs%3D&hl=ca&source=homepage&sa=X&ved=0ahUKEwin5pTbsb-EAxVWcKQEHXUzBq0Q2ZgBCCE">català</a>
+            <a
+                href="https://www.google.es/setprefs?sig=0_YtcfE-ogQRI-cqkSHHyH5HwgDYs%3D&hl=gl&source=homepage&sa=X&ved=0ahUKEwin5pTbsb-EAxVWcKQEHXUzBq0Q2ZgBCCI">galego</a>
+            <a
+                href="https://www.google.es/setprefs?sig=0_YtcfE-ogQRI-cqkSHHyH5HwgDYs%3D&hl=eu&source=homepage&sa=X&ved=0ahUKEwin5pTbsb-EAxVWcKQEHXUzBq0Q2ZgBCCM">euskara</a>
+        </footer>
+    </main>
+</body>
+
+</html>

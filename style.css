@@ -1,0 +1,570 @@
+@font-face {
+    font-family: titleFont;
+    src: url(Product\ Sans\ Bold.ttf);
+}
+
+@font-face {
+    font-family: googleFont;
+    src: url(Product\ Sans\ Regular.ttf);
+}
+
+* {
+    font-family: googleFont, Arial, sans-serif;
+}
+
+img {
+    
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-top: 1%;
+
+
+    vertical-align: middle;
+    align-items: center;
+
+    text-align: center;
+}
+
+.nav-left {
+    display: flex;
+    column-gap: 20px;
+}
+.nav-right {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.nav-img {
+    width: 25px;
+    cursor: pointer;
+
+}
+
+.pfp {
+    width: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    margin-right: 8px;
+    vertical-align: top;
+
+}
+
+.nav-right-images-container {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.dropdown-menu-content {
+    display: none;
+    position: absolute;
+    right: 25px;
+    top: 63px;
+
+    opacity: 0.9;
+    background-color: #c4c4c4;
+    padding: 8px;
+    box-shadow: 2px black;
+
+    border-radius: 5px;
+
+    min-width: 32px;
+
+    font-size: 12px;
+
+    
+}
+
+.dropdown-menu:hover .dropdown-menu-content {
+    display: block;
+}
+
+.dropdown-pfp-content {
+    display: none;
+    position: absolute;
+    right: 25px;
+    top: 63px;
+
+    opacity: 0.9;
+    background-color: #c4c4c4;
+    padding: 8px;
+    box-shadow: 2px black;
+
+    border-radius: 5px;
+
+    min-width: 32px;
+
+    font-size: 12px;
+
+    text-align: left;
+
+    
+}
+
+.dropdown-pfp:hover .dropdown-pfp-content {
+    display: block;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+
+    font-size: 56px;
+    font-family: titleFont, arial, sans-serif;
+    align-self: center;
+
+}
+
+
+
+.blue {
+    color: #4285f4
+}
+
+.red {
+    color: #db4437
+}
+
+.yellow {
+    color: #f4b400;
+}
+
+.green {
+    color: #0f9d58;
+}
+
+form {
+    margin-left: auto;
+}
+
+.form-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.searchBar {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 7.5fr 0.5fr 1fr;
+    column-gap: 0;
+
+
+    width: 700px;
+    height: 45px;
+
+    border-radius: 25px;
+
+    border: 1px solid black;
+
+}
+
+/*Copypasted code to remove the X which appears whenever you write something in the search bar*/
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+#search {
+
+    all: unset;
+
+    border: transparent;
+    padding-left: 0px;
+
+    width: 500px;
+}
+
+.glass {
+
+    background: transparent;
+    margin-top: 12px;
+    margin-left: 20px;
+    height: 20px;
+
+    opacity: 0.5;
+
+    width: fit-content;
+}
+
+.side {
+
+
+    background: transparent;
+    cursor: pointer;
+    margin-top: 12px;
+    margin-left: 20px;
+    height: 22px;
+
+    width: fit-content;
+
+}
+
+.btt {
+    justify-content: center;
+
+    display: flex;
+    align-self: center;
+    column-gap: 5px;
+
+    width: fit-content;
+    margin-left: auto;
+    margin-right:auto;
+
+}
+
+.btt button {
+    border: none;
+    background-color: rgba(211, 211, 211, 0.454);
+
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+
+    box-sizing: border-box;
+    ;
+    justify-content: center;
+}
+
+.btt button:hover {
+    border: solid;
+    border-width: 1px;
+}
+
+footer {
+    text-align: center;
+}
+
+
+/*The app menu*/
+
+#menu-link {
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 4px;
+}
+
+#menu-link:hover {
+    background-color: #dfdfdf8a;
+}
+
+#menu-link:active {
+    background-color: #2323238a;
+}
+.all-the-menu {
+    position: absolute;
+    top: 60px;
+    right: 5%;
+
+    box-sizing: border-box;
+
+    background-color: rgb(242, 244, 248);
+    border-radius: 25px;
+    height: 450px;
+
+    padding: 20px;
+    display: none;
+
+    grid-template-columns: auto auto auto;
+
+    column-gap: 20px;
+
+    row-gap: 20px;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    z-index: 100;
+    
+}
+
+.active-menu {
+    box-shadow: -17px 4px 36px -10px rgba(0,0,0,0.75);
+}
+
+
+.menu-element {
+    display: flex;
+    flex-direction: column;
+    padding:12.5px;
+
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.menu-element:hover {
+    background-color: #dfdfdf8a;
+}
+.all-the-menu img {
+    height: 40px;
+}
+
+.all-the-menu figcaption {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/*Special scrollbar for the menu*/
+.all-the-menu::-webkit-scrollbar {
+    width: 5px;
+    max-height: 45px;
+}
+
+.all-the-menu::-webkit-scrollbar-track {
+    border-radius: 25px;
+}
+
+.all-the-menu::-webkit-scrollbar-thumb {
+    background: rgb(204, 204, 204); 
+    border-radius: 25px;
+}
+
+.all-the-menu::-webkit-scrollbar-thumb:hover {
+    background: #6d6d6d; 
+}
+
+.all-the-profile {
+    position: absolute;
+    top: 60px;
+    right: 2%;
+
+    box-sizing: border-box;
+
+    background-color: rgb(240, 240, 240);
+    border-radius: 25px;
+    height: fit-content;
+    width: 350px;
+
+    padding: 5px;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    row-gap: 5px;
+
+    
+    
+
+    z-index: 200;
+}
+
+#pfp-link {
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 4px;
+}
+
+#pfp-link:hover {
+    background-color: #dfdfdf8a;
+}
+
+#pfp-link:active {
+    background-color: #2323238a;
+}
+
+
+#close-profile{
+    position: absolute;
+
+    right: 25px;
+    top: 12px;
+
+    background-color: rgb(240, 240, 240);
+    border: none;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+#close-profile:hover {
+    background-color:  rgba(184, 184, 184, 0.872);
+}
+.closing {
+    width: 15px;
+    cursor: pointer;
+
+}
+
+.email-handle {
+    font-size: 12px;
+    justify-self: top;
+}
+
+.profile {
+    width: 60px;
+    cursor: pointer;
+}
+.edit-icon {
+    position: absolute;
+    width:25px;
+
+    top: 90px;
+    right: 137px;
+    box-shadow: #4285f4;
+
+    cursor: pointer;
+}
+
+.edit-icon:hover{
+    width: 29px;
+    background-color: #4285f4;
+    border-radius: 300px;
+}
+.gestion {
+    background-color: rgba(255, 255, 255, 0.694);
+    border: 0px;
+    border-radius: 25px;
+
+    padding: 10px;
+
+    width: 240px;
+
+    font-weight: bold;
+
+    color: #4285f4;
+
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+
+.gestion:hover {
+    background-color: rgba(184, 184, 184, 0.872);
+}
+
+.recomendadas {
+    display: flex;
+    column-gap: 20px;
+    background-color: rgba(252, 252, 252, 0.872);
+    border: 0px;
+    border-radius: 25px;
+
+    align-items: center;
+
+    padding: 10px;
+
+    width: 320px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.recomendadas:hover {
+    background-color: rgba(184, 184, 184, 0.872);
+}
+
+.icons-profile {
+    width: 35px;
+}
+
+.button-row {
+    display: flex;
+    column-gap: 3px;
+    justify-content: space-evenly;
+    width: 94%;
+
+}
+
+.button-row  button {
+    background-color: rgba(252, 252, 252, 0.872);
+    border: none;
+    padding: 5px;
+
+    cursor: pointer;
+}
+
+
+
+.añadir {
+    display: flex;
+    column-gap: 15px;
+
+    align-items: center;
+    border-radius: 25px 0px 0px 25px;
+
+    width: 100%;
+}
+
+.añadir:hover {
+    background-color: rgba(184, 184, 184, 0.872);
+}
+
+.añadir:hover .añadir-img {
+    filter: brightness(0);
+}
+
+.cerrar {
+    display: flex;
+    column-gap: 15px;
+
+    align-items: center;
+    border-radius: 0px 25px 25px 0px;
+
+    width: 100%;
+    padding-left: 55px;
+}
+
+.cerrar:hover {
+    background-color: rgba(184, 184, 184, 0.872);
+}
+
+.pol-privacidad {
+    font-size: 10px;
+    justify-self: end;
+}
+
+.pol-privacidad a {
+    text-decoration: none;
+    color: #555;
+    padding: 4px;
+}
+.pol-privacidad a:hover {
+    background-color: rgba(184, 184, 184, 0.872);
+}
